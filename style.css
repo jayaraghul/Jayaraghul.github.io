@@ -424,14 +424,10 @@ img { max-width:100%; display:block; }
     box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
 }
 
-/* Inactive project cards — !important needed: .fade-in.visible has equal specificity
-   and appears later in the sheet, so without it .inactive opacity/transform are overridden */
-.project-card.inactive {
-    opacity: 0.15 !important;
-    transform: scale(0.96) !important;
-    pointer-events: none;
-}
-.project-card.inactive:hover { transform: scale(0.96) !important; box-shadow: var(--shadow); }
+/* Filter dimming is applied via inline styles in script.js (not a CSS class).
+   Inline styles have the highest specificity and always beat .fade-in.visible,
+   so no !important hacks are needed. The transition on .project-card handles
+   the smooth fade between states automatically. */
 
 /* Filter bar */
 .filter-bar {

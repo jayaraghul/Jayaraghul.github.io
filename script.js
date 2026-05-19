@@ -66,57 +66,96 @@ if (fadeEls.length) {
 
     let activeFilter = null;
 
-    // Show the hint once the skills section is ready
+    // Show the "filter by skill" hint in the projects section header
     if (filterHint) filterHint.style.display = '';
+
+    // Dim a card: inline styles always win over any class (no !important battles)
+    function dimCard(card) {
+        card.style.opacity       = '0.15';
+        card.style.transform     = 'scale(0.96)';
+        card.style.pointerEvents = 'none';
+        card.setAttribute('aria-hidden', 'true');
+    }
+
+    // Restore a card to full visibility
+    function restoreCard(card) {
+        card.style.opacity       = '';
+        card.style.transform     = '';
+        card.style.pointerEvents = '';
+        card.removeAttribute('aria-hidden');
+    }
 
     function applyFilter(key, label) {
         activeFilter = key;
 
-        // Update tag highlight states
+        // Highlight the active skill tag, clear the rest
         skillTags.forEach(tag => {
             const isActive = tag.dataset.filter === key;
             tag.classList.toggle('skill-tag--active', isActive);
             tag.setAttribute('aria-pressed', isActive ? 'true' : 'false');
         });
 
-        // Show / hide cards
+        // Show matching cards, dim the rest.
+        // Partial match: a card remains visible if ANY one of its skills equals
+        // the selected filter key (comma-separated list, case-insensitive).
         let matchCount = 0;
         cards.forEach(card => {
-            const skills = (card.dataset.skills || '').split(',').map(s => s.trim());
-            const match  = skills.includes(key);
-            card.classList.toggle('inactive', !match);
-            if (match) matchCount++;
+            const cardSkills = (card.dataset.skills || '')
+                .toLowerCase()
+                .split(',')
+                .map(s => s.trim())
+                .filter(Boolean);
+
+            const matches = cardSkills.some(s => s === key.toLowerCase());
+
+            if (matches) {
+                restoreCard(card);
+                matchCount++;
+            } else {
+                dimCard(card);
+            }
         });
 
-        // Update filter bar
+        // Render the filter status bar
         filterBar.innerHTML =
-            `<span class="filter-bar-label">Showing <strong>${matchCount}</strong> project${matchCount !== 1 ? 's' : ''} using <strong>${label}</strong></span>` +
-            `<button class="filter-clear-btn" id="filterClearBtn" aria-label="Clear filter">Show all</button>`;
+            `<span class="filter-bar-label">` +
+              `Showing <strong>${matchCount}</strong> ` +
+              `project${matchCount !== 1 ? 's' : ''} · ` +
+              `<strong>${label}</strong>` +
+            `</span>` +
+            `<button class="filter-clear-btn" id="filterClearBtn" aria-label="Clear skill filter">` +
+              `All Projects` +
+            `</button>`;
         filterBar.classList.add('active');
         document.getElementById('filterClearBtn').addEventListener('click', clearFilter);
 
-        // Scroll to projects grid
+        // Scroll the projects section into view
         document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function clearFilter() {
         activeFilter = null;
+
         skillTags.forEach(tag => {
             tag.classList.remove('skill-tag--active');
-            tag.removeAttribute('aria-pressed');
+            tag.setAttribute('aria-pressed', 'false');
         });
-        cards.forEach(card => card.classList.remove('inactive'));
+
+        cards.forEach(restoreCard);
+
         filterBar.classList.remove('active');
         filterBar.innerHTML = '';
     }
 
+    // Wire up each skill tag
     skillTags.forEach(tag => {
         tag.setAttribute('aria-pressed', 'false');
 
         const activate = () => {
             const key = tag.dataset.filter;
+            // Click the active filter again → reset (toggle behaviour)
             if (activeFilter === key) {
-                clearFilter();   // toggle off same tag
+                clearFilter();
             } else {
                 applyFilter(key, tag.textContent.trim());
             }
