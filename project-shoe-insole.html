@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Printed Shoe Insoles | Jayaraghul Thangaraj Kannan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JTK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education &amp; Awards</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-hero-back">← Back to Projects</a>
+            <p class="project-hero-tag">Biomedical Engineering · FDM · Materials Selection · Final Year Project</p>
+            <h1 class="project-hero-title">3D Printed Customised<br>Shoe Insoles</h1>
+            <p class="project-hero-sub">Design, fabrication, and biomechanical assessment of FDM-printed shoe insoles using VarioShore TPU with graded lattice geometries — from material characterisation and SolidWorks FEA through to physical prototypes tested on a ZwickRoell machine.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT BODY -->
+    <section class="project-body-section">
+        <div class="project-body-container">
+
+            <div class="project-info-grid fade-in">
+                <div class="project-info-card">
+                    <p class="project-info-label">Course</p>
+                    <p class="project-info-value">ENG5005/5006 — Research Methods (Final Year Project)</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Institution</p>
+                    <p class="project-info-value">Monash University, Clayton</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Outcome</p>
+                    <p class="project-info-value">Physical Prototypes Printed &amp; Mechanically Tested</p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <h3 class="project-section-title">Project Overview</h3>
+            <p class="project-text">Conventional off-the-shelf insoles cannot deliver the right balance of support, cushioning, and pressure relief for people with flat feet, plantar fasciitis, or diabetic foot conditions. This project explored whether FDM 3D printing with a foaming thermoplastic polyurethane could produce a customised insole that outperforms standard orthotic solutions — using real foot geometry, graded lattice structures, and systematic material characterisation to make that case.</p>
+            <p class="project-text">The project ran across two semesters: Semester 1 (ENG5005) focused on literature review, material selection, CAD design, and FEA simulation setup. Semester 2 (ENG5006) delivered print calibration, physical prototypes, and mechanical testing — culminating in insoles that were fabricated, worn, and tested.</p>
+
+            <!-- My Role -->
+            <h3 class="project-section-title">My Role</h3>
+            <p class="project-text">This was a five-person final year project, and in practice I carried the project's direction and momentum from start to finish. Two teammates — Kenny and Himmat — were consistent, technically engaged contributors who could be relied on to deliver; together the three of us formed the working core of the team. Keeping everyone aligned, chasing contributions, reviewing and lifting the quality of every section before submission, and making sure the project stayed on track through equipment unavailability and institutional delays — that coordination was as much a part of my workload as the technical work itself.</p>
+            <p class="project-text">On the technical side, my responsibilities spanned the full project lifecycle:</p>
+            <ul class="project-list">
+                <li><strong>Material selection lead:</strong> Evaluated five TPU and EVA material candidates across Shore A hardness, density, elongation at break, and FDM compatibility. Recommended VarioShore TPU as the optimal choice — its foaming mechanism enables tunable softness zones through extrusion temperature alone, something no conventional TPU can match.</li>
+                <li><strong>Lattice design and infill optimisation:</strong> Reviewed and documented the mechanical trade-offs between honeycomb, gyroid, auxetic, Voronoi, and lattice structures, establishing the design rationale for zone-specific density gradients across the heel, arch, and forefoot.</li>
+                <li><strong>SolidWorks FEA:</strong> Set up the foot model, applied 300N boundary conditions (half of 60 kg body weight), defined custom skin material properties, and worked through mesh refinement and convergence issues. Documented all simulation constraints and iterative fixes.</li>
+                <li><strong>Print calibration and prototyping (with Kenny):</strong> Fabricated VarioShore TPU test cubes at five extrusion temperatures (200–240°C) to characterise how temperature affects density and Shore A hardness. Used those results to set final print parameters for full insole fabrication.</li>
+                <li><strong>Mechanical testing:</strong> Conducted Shore A hardness testing on all temperature variants using a ZwickRoell machine, generating the comparative dataset that validated the material selection and print parameter choices.</li>
+            </ul>
+
+            <!-- Material Selection -->
+            <h3 class="project-section-title">Why VarioShore TPU</h3>
+            <p class="project-text">Most 3D-printed insole research uses standard TPU filaments — flexible, durable, but fixed in hardness. The key insight driving this project's material choice was that VarioShore TPU's foaming agent activates with heat: at higher extrusion temperatures, the material expands, becoming lighter and softer. This means stiffness zones are not designed through geometry alone — they are baked directly into the print temperature profile.</p>
+
+            <div class="insole-material-grid fade-in">
+                <div class="insole-material-card">
+                    <span class="insole-material-stat">45A – 70A</span>
+                    <span class="insole-material-label">Tunable Shore A hardness</span>
+                    <p>Adjusted by extrusion temperature. No post-processing, no separate parts — softness is a print setting.</p>
+                </div>
+                <div class="insole-material-card highlight">
+                    <span class="insole-material-stat">50–60%</span>
+                    <span class="insole-material-label">Weight reduction vs conventional TPU</span>
+                    <p>Foamed structure at ~0.4–0.68 g/cm³ compared to ~1.2 g/cm³ for standard filaments.</p>
+                </div>
+                <div class="insole-material-card">
+                    <span class="insole-material-stat">0.2 mm</span>
+                    <span class="insole-material-label">Layer height — FDM lattice resolution</span>
+                    <p>Prusa MK4 direct-drive extruder capable of printing fine lattice walls without delamination.</p>
+                </div>
+                <div class="insole-material-card">
+                    <span class="insole-material-stat">EVA +</span>
+                    <span class="insole-material-label">Optional comfort top layer</span>
+                    <p>Laminated EVA sheet evaluated alongside pure-TPU configurations for peak pressure comparison.</p>
+                </div>
+            </div>
+
+            <!-- Lattice Structures -->
+            <h3 class="project-section-title">Lattice Design</h3>
+            <p class="project-text">Five infill architectures were evaluated for the insole body: cellular (honeycomb, triangle, rhombic, squared, re-entrant), gyroid, auxetic, Voronoi, and standard lattice. The final design uses a graded lattice with denser unit cells under the heel for impact resistance, and a more open, flexible geometry under the arch and forefoot for cushioning and pressure redistribution.</p>
+            <div class="ww-wide-img fade-in">
+                <img src="images/projects/shoe-insole/lattice-structures.jpg" alt="Comparison of lattice infill architectures for 3D printed insoles — cellular honeycomb, triangle, rhombic, and re-entrant patterns (A); physical TPU lattice cube sample (B); auxetic patterns at 60, 75, and 90 degree angles with insole application (C); lattice insole cross-sections with unit cell dimensions (D)">
+                <span class="ww-img-caption">Lattice architecture evaluation — from left: cellular structures, auxetic variants, and zone-specific lattice cross-sections with unit cell dimensions</span>
+            </div>
+
+            <!-- FEA -->
+            <h3 class="project-section-title">Simulation — SolidWorks FEA</h3>
+            <p class="project-text">A publicly available 3D foot model was used to set up the simulation environment in SolidWorks. A 300N load (representing half body weight for a 60 kg person) was applied across the plantar surface with a fixed boundary condition at the ankle. Custom material properties for human skin were defined manually, as no standard library entry existed. The Von Mises stress map reveals pressure concentration at the metatarsal heads and heel — the exact zones the graded lattice design addresses.</p>
+            <div class="insole-fea-block fade-in">
+                <img src="images/projects/shoe-insole/fea-foot.jpg" alt="SolidWorks FEA Von Mises stress distribution on foot and insole — showing peak stress hotspots at metatarsal heads and forefoot, max 1.7695 MPa, min 0.003 MPa, 5558 mesh cycles">
+                <div class="insole-fea-notes">
+                    <p class="project-text">The simulation confirmed that peak plantar stress occurs at the metatarsal heads and heel — consistent with clinical literature reporting 200–600 kPa in those regions. This validated the zone-specific lattice density approach: stiffer geometry under the heel, more compliant under the forefoot.</p>
+                    <p class="project-text">Achieving convergence required iterative mesh refinement and boundary condition simplification. The final simulation used 5,558 mesh cycles with Von Mises stress ranging from 0.003 to 1.77 MPa across the plantar surface.</p>
+                </div>
+            </div>
+
+            <!-- Print Calibration -->
+            <h3 class="project-section-title">Print Calibration — Temperature vs Density</h3>
+            <p class="project-text">Before printing full insoles, a calibration run of five 25×25×25 mm VarioShore TPU test cubes was fabricated at extrusion temperatures from 200°C to 240°C. Each cube was weighed and tested for Shore A hardness on the ZwickRoell machine to map the relationship between temperature, foam density, and softness.</p>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure>
+                    <img src="images/projects/shoe-insole/temperature-samples.jpg" alt="Five VarioShore TPU test cubes printed at temperatures 200, 210, 220, 220, and 240 degrees Celsius with handwritten density labels showing 0.7, 0.7, 0.7, 0.7, and 0.68 g/cm³ respectively">
+                    <figcaption class="ww-img-caption">Temperature calibration samples — 200°C to 240°C, density labelled in g/cm³</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/projects/shoe-insole/hardness-testing.jpg" alt="ZwickRoell universal testing machine performing Shore A hardness compression test on VarioShore TPU insole sample — stainless steel compression platens visible">
+                    <figcaption class="ww-img-caption">ZwickRoell hardness testing — Shore A compression characterisation</figcaption>
+                </figure>
+            </div>
+
+            <p class="project-text">At 240°C, the foaming agent fully activated — producing the lowest density sample (0.68 g/cm³) and softest Shore A reading. Lower temperatures produced denser, stiffer samples at around 0.7 g/cm³. These results directly informed the zone-specific print temperature profile used in the final insole prototypes.</p>
+
+            <!-- Printing + Final Part -->
+            <h3 class="project-section-title">Fabrication &amp; Physical Outcome</h3>
+            <p class="project-text">Full-size insole prototypes were fabricated on a Prusa MK4 FDM printer using the calibrated print parameters. The lattice geometry was sliced and validated before printing, with direct-drive extrusion ensuring consistent TPU deposition throughout. Two configurations were produced: a standalone VarioShore TPU insole and a hybrid version with a laminated EVA top layer.</p>
+
+            <div class="insole-final-grid fade-in">
+                <figure>
+                    <img src="images/projects/shoe-insole/printing-process.jpg" alt="Prusa MK4 FDM printer mid-print of shoe insole — left image shows full insole on print bed at 67% completion; right image shows close-up of printed lattice surface texture in white TPU">
+                    <figcaption class="ww-img-caption">Prusa MK4 printing the insole — mid-print (67%) and finished lattice surface detail</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/projects/shoe-insole/finished-insole.jpg" alt="Side profile of finished 3D printed VarioShore TPU insole with a foot in a green sock placed on top — showing the insole sitting flat on a wooden surface with uniform profile">
+                    <figcaption class="ww-img-caption">Finished prototype — worn and validated against real foot geometry</figcaption>
+                </figure>
+            </div>
+
+            <!-- Outcomes -->
+            <h3 class="project-section-title">Key Outcomes</h3>
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <h5>Physical Prototypes Delivered</h5>
+                    <p>Full-size VarioShore TPU insoles fabricated on a Prusa MK4 and physically validated against real foot geometry. Both standalone TPU and hybrid TPU+EVA configurations produced.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Material Data Generated</h5>
+                    <p>Shore A hardness and density dataset across five temperature points (200–240°C). 240°C identified as optimal for softness and weight, reaching 0.68 g/cm³ — confirming the foaming mechanism.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>FEA-Validated Design Rationale</h5>
+                    <p>SolidWorks simulation confirmed pressure concentration at metatarsal heads and heel, directly justifying the graded lattice density approach used in the final geometry.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Managed Under Constraint</h5>
+                    <p>Delivered physical results despite scanner unavailability, 3D printer downtime, and lab access delays in Semester 1. Contingency planning and team coordination kept the project on track for Semester 2 prototyping.</p>
+                </div>
+            </div>
+
+            <!-- Tools & Methods -->
+            <h3 class="project-section-title" style="margin-top:48px;">Tools &amp; Methods</h3>
+            <div class="skill-tags" style="margin-bottom:48px;">
+                <span>FDM 3D Printing (Prusa MK4)</span>
+                <span>VarioShore TPU</span>
+                <span>EVA Lamination</span>
+                <span>SolidWorks FEA</span>
+                <span>Von Mises Stress Analysis</span>
+                <span>Shore A Hardness Testing</span>
+                <span>ZwickRoell Testing</span>
+                <span>Lattice Structure Design</span>
+                <span>3D Foot Scanning (AtlaScan)</span>
+                <span>Material Selection</span>
+                <span>Compression Testing</span>
+                <span>Biomechanical Analysis</span>
+            </div>
+
+            <a href="index.html#projects" class="btn btn-primary">← Back to All Projects</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Jayaraghul Thangaraj Kannan &nbsp;·&nbsp; Materials &amp; Process Engineer &nbsp;·&nbsp; Melbourne, Australia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

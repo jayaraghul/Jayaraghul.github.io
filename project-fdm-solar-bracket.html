@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDM Solar Cell Brackets | Jayaraghul Thangaraj Kannan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JTK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education &amp; Awards</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-hero-back">← Back to Projects</a>
+            <p class="project-hero-tag">FDM · DfAM · Material Selection · UN SDG 7 · MTE5887</p>
+            <h1 class="project-hero-title">FDM-Printed Solar Cell<br>Bracket Design</h1>
+            <p class="project-hero-sub">Scaled-down prototype brackets for solar cell mounting — designed and fabricated using FDM to demonstrate how additive manufacturing can enable local, low-cost production of solar hardware for communities without access to grid electricity, directly addressing UN Sustainable Development Goal 7.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT BODY -->
+    <section class="project-body-section">
+        <div class="project-body-container">
+
+            <div class="project-info-grid fade-in">
+                <div class="project-info-card">
+                    <p class="project-info-label">Course</p>
+                    <p class="project-info-value">MTE5887 — Advanced Manufacturing Processes</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Institution</p>
+                    <p class="project-info-value">Monash University, Clayton</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Outcome</p>
+                    <p class="project-info-value">Physical Prototypes Printed &amp; Assembled</p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <h3 class="project-section-title">Project Overview</h3>
+            <p class="project-text">Approximately 700 million people globally still lack access to electricity — the majority in rural and remote regions where grid infrastructure is absent or uneconomical to build. Solar energy is one of the most viable pathways to closing that gap, but access to mounting hardware is itself a barrier: manufactured brackets are expensive to import, fragile to ship, and often unavailable locally. This project addressed that problem directly.</p>
+            <p class="project-text">The core proposition was simple: if FDM 3D printers — already used in community makerspaces, field research stations, and low-income settings worldwide — can produce functional solar cell brackets on-demand from locally-sourced filament, then the hardware dependency is eliminated. The bracket doesn't need to be shipped. It just needs to be printed.</p>
+
+            <!-- UN SDG callout -->
+            <div class="tram-nda-notice fade-in" style="background:oklch(0.97 0.02 155); border-color:oklch(0.72 0.12 155);">
+                <span class="tram-nda-icon">🌍</span>
+                <div>
+                    <p class="tram-nda-title" style="color:oklch(0.35 0.14 155);">UN Sustainable Development Goal 7 — Affordable and Clean Energy</p>
+                    <p class="tram-nda-text" style="color:oklch(0.38 0.08 155);">The brackets produced in this project are scaled-down prototypes — proof-of-concept models demonstrating the manufacturing approach rather than full production parts. The design intent is real-world deployment: an FDM printer in a rural community can produce these brackets using widely available PLA filament, mount a solar cell, and provide electricity where none previously existed. No specialist tooling, no supply chain, no infrastructure dependency.</p>
+                </div>
+            </div>
+
+            <p class="project-text">Two prototype bracket scales were developed: a compact portable holder for a single solar cell with a ball-joint rotation mechanism (for hand-adjustment toward the sun), and a larger structural frame for building-roof installation of a standard-size solar panel. Both were designed in SolidWorks, fabricated on the FlashForge Creator Pro in PLA, and physically assembled and evaluated against their functional requirements.</p>
+
+            <!-- My Contributions -->
+            <h3 class="project-section-title">My Contributions</h3>
+            <p class="project-text">On a three-person team, my formally assigned responsibilities covered the foundation work that determined every downstream decision: design conceptualisation, CAD modelling, and material research and selection. Beyond those assignments, I contributed to quality control, testing, report writing, and presentation preparation alongside the rest of the team.</p>
+            <ul class="project-list">
+                <li><strong>Design conceptualisation:</strong> Led the ideation process — evaluated multiple approaches before converging on the two-bracket strategy. Defined the functional requirements (portability vs. structural robustness), key DfAM constraints (build volume, overhang limits, bridging, minimum feature size), and the final design direction for both models.</li>
+                <li><strong>CAD modelling:</strong> Built all SolidWorks models for both bracket assemblies — holder body, fixture, panel frame, and rod-and-socket rotation joint — with FDM-specific considerations applied throughout (wall thickness, draft angles, feature clearances).</li>
+                <li><strong>Material research and selection:</strong> Evaluated PLA, PETG, ABS, and ASA against the application requirements: structural load, UV resistance, thermal stability, and FDM printability on the Creator Pro. Identified ASA as the technically optimal choice; documented PLA as the practical substitute given material availability.</li>
+            </ul>
+
+            <!-- CAD Designs -->
+            <h3 class="project-section-title">CAD Design — Two Bracket Systems</h3>
+            <p class="project-text">Both designs were developed in SolidWorks 2024 with the FlashForge Creator Pro's 230×150×140 mm build envelope as the primary constraint. Feature sizes were kept above the 0.4 mm nozzle diameter minimum, and overhanging geometry was minimised to reduce support material requirements and improve surface quality on functional faces.</p>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/cad-small-bracket.png" alt="SolidWorks CAD assembly of small portable solar cell bracket — bracket body with channel slot, rod connector, and ball-and-socket joint mechanism allowing angular adjustment, rendered in grey">
+                    <figcaption class="ww-img-caption">Small portable bracket — single solar cell holder with ball-joint rotation mechanism for orientation adjustment</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/cad-large-bracket.png" alt="SolidWorks CAD assembly of large building-mounted solar panel bracket — rectangular tray base with upright mounting block, rod post, and four-corner fixing tabs, rendered in grey">
+                    <figcaption class="ww-img-caption">Large panel bracket — building-roof installation frame with corner-mount fixing tabs and central post assembly</figcaption>
+                </figure>
+            </div>
+
+            <!-- Material Selection -->
+            <h3 class="project-section-title">Material Selection</h3>
+            <p class="project-text">Four FDM-compatible materials were evaluated against the bracket's operating environment: outdoor UV exposure, sustained structural load (panel weight and wind), thermal cycling, and dimensional stability over time.</p>
+
+            <div class="tram-material-grid fade-in">
+                <div class="tram-material-card selected">
+                    <p class="tram-material-role">Optimal — Unavailable</p>
+                    <h5>ASA (Acrylonitrile Styrene Acrylate)</h5>
+                    <p>Superior UV and weather resistance compared to all alternatives. High thermal stability and good mechanical strength for outdoor structural use. Technically the correct material — not available on the Creator Pro at time of fabrication.</p>
+                </div>
+                <div class="tram-material-card selected">
+                    <p class="tram-material-role">Selected — Fabrication Material</p>
+                    <h5>PLA (Polylactic Acid)</h5>
+                    <p>Widely available globally — including in low-income and remote settings — with excellent FDM printability and sufficient strength for prototype evaluation. Renewable plant-based feedstock supports sustainability goals. Limitation: lower thermal resistance and UV durability than ASA — acceptable for this prototype stage; ASA or PETG-CF would be specified for field deployment.</p>
+                </div>
+                <div class="tram-material-card rejected">
+                    <p class="tram-material-role">Evaluated — Not Selected</p>
+                    <h5>ABS (Acrylonitrile Butadiene Styrene)</h5>
+                    <p>Good mechanical properties and moderate UV resistance, but warping during printing requires an enclosed heated chamber and acetone post-processing. Higher emission of volatile organic compounds during printing.</p>
+                </div>
+                <div class="tram-material-card rejected">
+                    <p class="tram-material-role">Evaluated — Not Selected</p>
+                    <h5>PETG (Polyethylene Terephthalate Glycol)</h5>
+                    <p>Good toughness and chemical resistance, but weaker UV stability than ASA and prone to stringing and moisture absorption during long prints. Marginal advantage over PLA for this application.</p>
+                </div>
+            </div>
+
+            <!-- Build Orientation -->
+            <h3 class="project-section-title">Build Orientation &amp; Print Parameters</h3>
+            <p class="project-text">Build orientation directly determines structural integrity, surface finish, and support material usage in FDM. For the solar brackets, a vertical (flat-face-down) orientation was selected: it aligns layer interfaces perpendicular to the primary bending load direction, produces a smooth bottom surface from contact with the build plate, and minimises support structures on functional faces.</p>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/slicer-orientation-good.png" alt="FlashPrint slicer showing solar panel body in optimal flat orientation on build plate — minimal support structure shown in red, clean outer walls in yellow">
+                    <figcaption class="ww-img-caption">Optimal orientation — flat on build plate, minimal supports, clean wall surfaces</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/slicer-orientation-bad.png" alt="FlashPrint slicer showing solar panel body in suboptimal on-edge orientation — extensive red support structure required underneath entire part">
+                    <figcaption class="ww-img-caption">Suboptimal orientation — on edge, heavy support requirement, compromised surface finish on outer walls</figcaption>
+                </figure>
+            </div>
+
+            <p class="project-text">Key process parameters were selected to balance surface quality against print time. A 0.18 mm first layer height and 0.27 mm subsequent layer height with 50% hexagonal infill were used — the hexagon pattern providing the best strength-to-material ratio for the panel tray geometry. A 10 mm/s first-layer speed ensured bed adhesion before stepping up to 60 mm/s for the body.</p>
+
+            <div class="skill-tags fade-in" style="margin-bottom:36px;">
+                <span>Nozzle: 0.4 mm</span>
+                <span>Extruder: 200°C</span>
+                <span>Bed: 60°C</span>
+                <span>Layer height: 0.18 mm</span>
+                <span>Print speed: 60 mm/s</span>
+                <span>Infill: 50% Hexagon</span>
+                <span>Supports: 40%</span>
+                <span>Raft: Enabled</span>
+            </div>
+
+            <!-- Printed Parts -->
+            <h3 class="project-section-title">Fabrication — Printed Parts</h3>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/printed-parts-table.png" alt="Two printed PLA parts on wooden table — U-channel base frame in background and spherical ball-joint connector in foreground, both white PLA">
+                    <figcaption class="ww-img-caption">Printed base channel and ball-joint connector — PLA on FlashForge Creator Pro</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/printed-panel-body.png" alt="Printed PLA solar panel body — flat square tray with raised edge walls and mounting notches, white PLA on grey fabric surface">
+                    <figcaption class="ww-img-caption">Printed panel body — flat tray with raised retaining walls for solar cell housing</figcaption>
+                </figure>
+            </div>
+
+            <!-- Mounted Assembly -->
+            <h3 class="project-section-title">Assembled Prototype</h3>
+            <p class="project-text">All printed components were cleaned of support material, assembled, and mounted onto a test rod to validate fit and mechanical function. The ball-and-socket joint on the small bracket allows the panel face to be angled for solar tracking by hand, while the larger bracket clips onto a surface mount rail using the corner tabs.</p>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/mounted-assembly.png" alt="Fully assembled FDM-printed solar cell bracket mounted on wooden rod — panel frame held by bracket body with ball-joint connector, all white PLA, held in hand">
+                    <figcaption class="ww-img-caption">Assembled small bracket mounted on test rod — panel frame, connector, and base all printed and assembled</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/fdm-solar-bracket/mounted-assembly-side.png" alt="Side view of assembled solar bracket mounted on edge of surface — showing bracket base clipped to edge with panel holder extending outward at angle">
+                    <figcaption class="ww-img-caption">Side-view — surface-mount configuration demonstrating edge-clip attachment</figcaption>
+                </figure>
+            </div>
+
+            <!-- Defects -->
+            <h3 class="project-section-title">Defects Observed &amp; Mitigations</h3>
+            <ul class="project-list">
+                <li><strong>Warping at base:</strong> Thermal contraction during cooling caused bottom-layer curl on larger flat parts. Mitigation: increase bed temperature, slower first-layer speed, and raft enabled — all applied in final print run.</li>
+                <li><strong>Z-axis stepping:</strong> Visible periodic banding on vertical walls from inconsistent Z-axis motor movement. Mitigation: reduce layer height for finer resolution, reduce print speed to improve motor accuracy at each increment.</li>
+                <li><strong>Layer shift:</strong> Occasional mid-print X/Y offset observed in early test prints. Mitigation: tighten belt tension, reduce travel speed, and tune slicer outer wall settings to reduce vibration-induced slip.</li>
+            </ul>
+
+            <!-- Outcomes -->
+            <h3 class="project-section-title">Outcomes</h3>
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <h5>Scaled Prototypes — Real Intent</h5>
+                    <p>Both bracket designs — portable single-cell holder and building-mount panel frame — printed, assembled, and validated as proof-of-concept prototypes. The real-world application: enabling communities without grid access to manufacture their own solar mounting hardware on-demand using a local FDM printer and commodity filament.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>DfAM Applied End-to-End</h5>
+                    <p>Design decisions at every stage — wall thickness, overhang angle, feature clearance, build orientation — were grounded in FDM process constraints rather than treated as afterthoughts.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Material Trade-off Documented</h5>
+                    <p>ASA identified as the technically correct long-term material for UV and thermal resistance; PLA validated as a suitable substitute for prototype evaluation and decentralised manufacturing contexts.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Print Defects Diagnosed &amp; Addressed</h5>
+                    <p>Warping, Z-stepping, and layer shift observed, root-caused, and resolved through parameter adjustments — building practical FDM process knowledge beyond textbook theory.</p>
+                </div>
+            </div>
+
+            <!-- Tools & Methods -->
+            <h3 class="project-section-title" style="margin-top:48px;">Tools &amp; Methods</h3>
+            <div class="skill-tags" style="margin-bottom:48px;">
+                <span>SolidWorks CAD</span>
+                <span>FDM 3D Printing</span>
+                <span>FlashForge Creator Pro</span>
+                <span>FlashPrint Slicer</span>
+                <span>DfAM</span>
+                <span>PLA / ASA</span>
+                <span>Build Orientation Optimisation</span>
+                <span>Support Structure Minimisation</span>
+                <span>Process Parameter Tuning</span>
+                <span>Prototype Assembly &amp; Testing</span>
+                <span>UN SDG Alignment</span>
+            </div>
+
+            <a href="index.html#projects" class="btn btn-primary">← Back to All Projects</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Jayaraghul Thangaraj Kannan &nbsp;·&nbsp; Materials &amp; Process Engineer &nbsp;·&nbsp; Melbourne, Australia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

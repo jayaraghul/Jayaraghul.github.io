@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPBF Lightweight Redesign | Jayaraghul Thangaraj Kannan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JTK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education &amp; Awards</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-hero-back">← Back to Projects</a>
+            <p class="project-hero-tag">Additive Manufacturing · DfAM · FEA · LPBF · SS316</p>
+            <h1 class="project-hero-title">Lightweight Redesign<br>via LPBF</h1>
+            <p class="project-hero-sub">Redesigning a structural metallic component using Design for Additive Manufacturing principles, topology optimisation, and Laser Powder Bed Fusion — achieving a 70.3% weight reduction while passing finite element analysis validation.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT INFO CARDS -->
+    <section class="project-body-section">
+        <div class="project-body-container">
+
+            <div class="project-info-grid fade-in">
+                <div class="project-info-card">
+                    <p class="project-info-label">Course</p>
+                    <p class="project-info-value">MTE5886 — Additive Manufacturing of Metallic Materials</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Institution</p>
+                    <p class="project-info-value">Monash University, Clayton</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Outcome</p>
+                    <p class="project-info-value">70.3% Weight Reduction — Physically Printed</p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <h3 class="project-section-title">Project Overview</h3>
+            <p class="project-text">The brief was to take a real metallic structural component and redesign it using Design for Additive Manufacturing (DfAM) principles, targeting at least a 40% reduction in mass without compromising structural integrity under its original loading conditions.</p>
+            <p class="project-text">The component selected was a stainless steel bracket (SS316) with two top mounting holes and a central bottom fixture point, originally weighing 510 g. The redesigned component was to be fabricated using Laser Powder Bed Fusion (LPBF) — a metal additive manufacturing process capable of producing complex, self-supporting geometries that are impossible to machine conventionally.</p>
+
+            <!-- Design Process -->
+            <h3 class="project-section-title">Design Process</h3>
+            <p class="project-text">Three preliminary designs were developed and evaluated before arriving at the final geometry. Each iteration was assessed against both manufacturability constraints (self-supporting geometry, minimal overhangs, no support structures required) and structural performance under FEA.</p>
+            <ul class="project-list">
+                <li><strong>Preliminary Design 1:</strong> Triangular plate connecting all three mounting points — simple, self-supporting, structurally direct. Established the load path logic that carried into the final design.</li>
+                <li><strong>Preliminary Design 2:</strong> Bridge-like arch structure — explored redistributing material to the outer load paths. Identified stress concentrations at the arch transitions.</li>
+                <li><strong>Preliminary Design 3 / Final:</strong> Refined triangular A-frame geometry with flared base flanges and hollow tube members — eliminates all overhangs, self-supportive at standard LPBF build angles, and balances mass removal with load distribution.</li>
+            </ul>
+
+            <!-- Design Comparison -->
+            <h3 class="project-section-title">Before &amp; After</h3>
+            <div class="lpbf-compare fade-in">
+                <figure class="lpbf-compare-item">
+                    <img src="images/projects/lpbf/original-component.png" alt="Original SS316 bracket design space — solid block with two top load holes and one bottom fixed boundary hole, green design space indicated, forces Fy and Fz of -1000N annotated">
+                    <figcaption>
+                        <span class="lpbf-compare-label before">Original Component</span>
+                        510 g — Conventional geometry, significant excess material in low-stress zones
+                    </figcaption>
+                </figure>
+                <div class="lpbf-compare-arrow">→</div>
+                <figure class="lpbf-compare-item">
+                    <img src="images/projects/lpbf/final-design-cad.png" alt="Final LPBF design for printing — SolidWorks render showing triangular A-frame with circular load hole at apex, flared base flanges, and self-supporting geometry">
+                    <figcaption>
+                        <span class="lpbf-compare-label after">Final LPBF Design</span>
+                        151.45 g — Triangular A-frame, self-supporting, 70.3% lighter
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- FEA Validation -->
+            <h3 class="project-section-title">Structural Validation — FEA</h3>
+            <p class="project-text">All designs were validated using static finite element analysis in SolidWorks Simulation. The material properties used were those of SS316 stainless steel: tensile strength 550 MPa, with a design allowable of 367 MPa (yield strength). Von Mises stress criterion was applied throughout.</p>
+            <p class="project-text">The final design returned a maximum Von Mises stress of <strong>235.7 MPa</strong> — well within the 367 MPa yield limit — with stresses distributed evenly across the load-bearing members and no critical stress concentrations at any geometric transitions.</p>
+
+            <div class="lpbf-fea-block fade-in">
+                <img src="images/projects/lpbf/final-fea.png" alt="FEA result for final LPBF design — Von Mises stress map showing max 235.7 MPa against 367 MPa yield strength of SS316">
+                <div class="lpbf-fea-stats">
+                    <div class="lpbf-fea-stat">
+                        <span class="lpbf-fea-value">235.7 MPa</span>
+                        <span class="lpbf-fea-label">Peak Von Mises Stress</span>
+                    </div>
+                    <div class="lpbf-fea-stat">
+                        <span class="lpbf-fea-value">367 MPa</span>
+                        <span class="lpbf-fea-label">SS316 Yield Strength</span>
+                    </div>
+                    <div class="lpbf-fea-stat">
+                        <span class="lpbf-fea-value">1.56×</span>
+                        <span class="lpbf-fea-label">Safety Factor</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Physical Output -->
+            <h3 class="project-section-title">Physical Outcome — LPBF Printed Part</h3>
+            <p class="project-text">The final design was fabricated using LPBF with post-processing by wire EDM to separate the part from the build plate. The printed component matched the CAD geometry, with clean surface definition on all load-bearing faces. Wire EDM cut marks are visible on the base, consistent with standard LPBF post-processing practice.</p>
+
+            <div class="lpbf-print-grid fade-in">
+                <figure>
+                    <img src="images/projects/lpbf/printed-part-top.jpg" alt="LPBF printed SS316 component — top view showing triangular A-frame and circular load hole">
+                    <figcaption>Top view — load hole and A-frame geometry</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/projects/lpbf/printed-part-side.jpg" alt="LPBF printed SS316 component — side view showing flared base and overall form">
+                    <figcaption>Side view — flared base flanges and wire EDM cut surface</figcaption>
+                </figure>
+            </div>
+
+            <!-- Outcomes -->
+            <h3 class="project-section-title">Key Outcomes</h3>
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <h5>70.3% Weight Reduction</h5>
+                    <p>510 g down to 151.45 g. Target was 40%. The final design exceeded the brief by a significant margin without compromising structural integrity.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>FEA Validated</h5>
+                    <p>Max Von Mises stress of 235.7 MPa — comfortably within the 367 MPa yield limit of SS316. Safety factor of 1.56 across the full load case.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Self-Supporting Geometry</h5>
+                    <p>Final design requires zero support structures during the LPBF build. All surfaces meet the critical 45° self-support angle — a core DfAM constraint that drove every design decision.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Physically Manufactured</h5>
+                    <p>Component was printed in SS316 via LPBF and post-processed with wire EDM. Physical part matched CAD geometry. Faculty described it as one of the stronger examples of DfAM in the cohort.</p>
+                </div>
+            </div>
+
+            <!-- Tools & Methods -->
+            <h3 class="project-section-title" style="margin-top:48px;">Tools &amp; Methods</h3>
+            <div class="skill-tags" style="margin-bottom:48px;">
+                <span>LPBF (Laser Powder Bed Fusion)</span>
+                <span>DfAM</span>
+                <span>SolidWorks 2018</span>
+                <span>FEA (Von Mises)</span>
+                <span>Topology Optimisation</span>
+                <span>Wire EDM</span>
+                <span>SS316 Stainless Steel</span>
+                <span>Iterative Design</span>
+                <span>Structural Analysis</span>
+            </div>
+
+            <a href="index.html#projects" class="btn btn-primary">← Back to All Projects</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Jayaraghul Thangaraj Kannan &nbsp;·&nbsp; Materials &amp; Process Engineer &nbsp;·&nbsp; Melbourne, Australia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

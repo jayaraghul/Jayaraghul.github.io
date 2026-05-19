@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarra Trams Seat Redesign | Jayaraghul Thangaraj Kannan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JTK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education &amp; Awards</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-hero-back">← Back to Projects</a>
+            <p class="project-hero-tag">Failure Analysis · Materials Compliance · Reverse Engineering · WIL Placement</p>
+            <h1 class="project-hero-title">Yarra Trams Passenger<br>Seat Redesign</h1>
+            <p class="project-hero-sub">A Work Integrated Learning placement at SisterWorks Inc., embedded in a live collaboration with Yarra Trams. Sole engineering responsibility across seat inspection, failure analysis, material selection, standards compliance, CAD modelling, and supplier engagement.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT BODY -->
+    <section class="project-body-section">
+        <div class="project-body-container">
+
+            <div class="project-info-grid fade-in">
+                <div class="project-info-card">
+                    <p class="project-info-label">Role</p>
+                    <p class="project-info-value">Engineering Intern (Sole Engineer)</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Host Organisation</p>
+                    <p class="project-info-value">SisterWorks Inc., Springvale VIC</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Client</p>
+                    <p class="project-info-value">Yarra Trams — Active Fleet Redesign</p>
+                </div>
+            </div>
+
+            <!-- NDA Notice -->
+            <div class="tram-nda-notice fade-in">
+                <span class="tram-nda-icon">🔒</span>
+                <div>
+                    <p class="tram-nda-title">Confidential Project</p>
+                    <p class="tram-nda-text">Final CAD models, 3D scan geometry, production drawings, and supplier documentation are subject to a confidentiality agreement between SisterWorks, Yarra Trams, and Monash University. This page describes the engineering process and outcomes without disclosing protected design deliverables.</p>
+                </div>
+            </div>
+
+            <!-- Overview -->
+            <h3 class="project-section-title">Project Overview</h3>
+            <p class="project-text">The passenger seats currently in service on the Yarra Trams network show significant wear — cracked and delaminated plywood backboards, permanently compressed foam cushions, and damaged upholstery — all of which compromise comfort, aesthetics, and compliance with updated fire safety standards. SisterWorks was engaged by Yarra Trams to re-engineer these seats: reverse engineer the existing design, identify what is failing and why, select better materials, and deliver a manufacturable replacement.</p>
+            <p class="project-text">I was the sole engineer assigned to this project. All engineering activities — inspection, standards review, material research, CAD modelling, 3D scanning coordination, and supplier engagement — were my direct responsibility throughout the placement.</p>
+
+            <!-- Failure Analysis -->
+            <h3 class="project-section-title">Failure Analysis — What Was Breaking and Why</h3>
+            <p class="project-text">The project began with hands-on disassembly and inspection of decommissioned seat modules. Observations were categorised into three degradation types:</p>
+            <ul class="project-list">
+                <li><strong>Structural degradation:</strong> Plywood backboards showed delamination, edge fraying, and moisture swelling at fastener interfaces and exposed corners — evidence of insufficient sealing during original fabrication and long-term exposure to the tram's cyclic temperature and humidity environment.</li>
+                <li><strong>Material fatigue:</strong> Foam cushions displayed permanent compression-set deformation and localised surface cracking, reflecting polymer matrix fatigue under the repeated cyclic loading of a high-turnover public transport seat.</li>
+                <li><strong>Surface wear:</strong> Upholstery failure concentrated in high-contact zones, confirming that durability under abrasion was not adequately specified in the original material selection.</li>
+            </ul>
+
+            <div class="ww-wide-img fade-in">
+                <img src="images/projects/tram-seat/seat-damage.jpg" alt="Three views of decommissioned Yarra Trams seat showing surface discolouration and wear (left), delaminated and cracked foam cushion exposed from side (centre), and edge damage to upholstery seam (right)">
+                <span class="ww-img-caption">Decommissioned seat inspection — surface wear, foam delamination, and edge/upholstery damage documented across all three components</span>
+            </div>
+
+            <!-- Standards -->
+            <h3 class="project-section-title">Standards Compliance Framework</h3>
+            <p class="project-text">Replacing a safety-critical component in an active rail fleet is not a materials substitution exercise — it is a compliance exercise. Every candidate material had to be evaluated against a defined set of regulatory benchmarks before it could be considered for prototyping.</p>
+            <ul class="project-list">
+                <li><strong>EN 45545-2 R22/R23</strong> — European fire behaviour requirements for railway seating components. Defines hazard levels (HL2/HL3) and test criteria for seat materials.</li>
+                <li><strong>AS 1530.2/.3</strong> — Australian flammability, ignitability, and smoke development tests for polymers and composites.</li>
+                <li><strong>AS/NZS 2269</strong> — Structural plywood specification; governs veneer species, thickness, bonding, and mechanical properties.</li>
+                <li><strong>DSAPT / AS 1428</strong> — Disability and accessibility standards applicable to public transport seating geometry.</li>
+            </ul>
+
+            <div class="ww-wide-img fade-in">
+                <img src="images/projects/tram-seat/design-criteria.png" alt="Design criteria table showing cushion and backbone requirements across fire safety, comfort and ergonomics, durability, manufacturability, cost-effectiveness, and sustainability — referencing EN 45545-2, AS 1530, and AS/NZS 2269">
+                <span class="ww-img-caption">Design criteria matrix — requirements mapped across six performance categories for both cushion and structural backbone</span>
+            </div>
+
+            <!-- Material Selection -->
+            <h3 class="project-section-title">Material Selection</h3>
+            <p class="project-text">Five foam types and three backbone materials were evaluated. The decision was driven by the intersection of fire compliance, mechanical durability, local availability, and CNC manufacturability.</p>
+
+            <div class="tram-material-grid fade-in">
+                <div class="tram-material-card selected">
+                    <p class="tram-material-role">Cushion — Selected</p>
+                    <h5>FR High-Resilience PU Foam</h5>
+                    <p>Urecel HR45-FR / HR50-FR. 45–60 kg/m³ density, ILD 140–170 N, >50% rebound recovery after compression. Meets EN 45545-2 R22 and AS 1530. Locally manufactured, 3-week lead time. Cost: ~AUD 40–120 per seat.</p>
+                </div>
+                <div class="tram-material-card selected">
+                    <p class="tram-material-role">Backbone — Selected</p>
+                    <h5>12 mm Structural Plywood + Resin Seal</h5>
+                    <p>AS/NZS 2269-certified laminated plywood (birch or hoop pine). CNC-machinable to scan geometry, compatible with epoxy/phenolic edge sealing for moisture resistance and improved fire performance. Cost: ~AUD 15–25 per seat.</p>
+                </div>
+                <div class="tram-material-card rejected">
+                    <p class="tram-material-role">Evaluated — Not Selected</p>
+                    <h5>GRP Composites &amp; Aluminium Honeycomb</h5>
+                    <p>High performance but impractical for this scope. GRP requires expensive tooling; honeycomb panels are primarily aerospace-grade with limited local supply and specialised fabrication requirements.</p>
+                </div>
+                <div class="tram-material-card rejected">
+                    <p class="tram-material-role">Evaluated — Not Selected</p>
+                    <h5>Memory Foam / Gel Silicone</h5>
+                    <p>Memory foam fails on durability — slow recovery and reduced resilience with extended use. Silicone gels offer superior fire resistance but at material costs that make fleet-scale refurbishment commercially unviable.</p>
+                </div>
+            </div>
+
+            <!-- Scoring Matrix -->
+            <h3 class="project-section-title">Weighted Scoring Matrix — Material Shortlist</h3>
+            <p class="project-text">Three candidate materials for the structural backbone were scored against 8 engineering criteria. Each criterion was weighted to reflect its relative importance in a safety-critical, high-turnover public transport application. Scores are out of 5; weighted totals determine the recommendation.</p>
+
+            <div class="scoring-matrix fade-in" style="font-size:0.82rem;">
+                <div class="scoring-row header" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Criterion</span>
+                    <span style="text-align:center;">Weight</span>
+                    <span style="text-align:center;">FR HR PU Foam</span>
+                    <span style="text-align:center;">Structural Plywood<br>(AS/NZS 2269)</span>
+                    <span style="text-align:center;">GRP Composites</span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>EN 45545-2 R22/R23 fire compliance</span>
+                    <span style="text-align:center;">20%</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                    <span style="text-align:center;"><span class="score-pass">4</span> (with resin seal)</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>AS 1530.2/.3 smoke &amp; toxicity</span>
+                    <span style="text-align:center;">15%</span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Durability under cyclic mechanical load</span>
+                    <span style="text-align:center;">15%</span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Compression-set resistance (seating load)</span>
+                    <span style="text-align:center;">15%</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                    <span style="text-align:center;">N/A (backbone)</span>
+                    <span style="text-align:center;">N/A (backbone)</span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Local availability &amp; lead time</span>
+                    <span style="text-align:center;">10%</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span> (3 wks)</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span> (2 wks)</span>
+                    <span style="text-align:center;"><span class="score-fail">2</span> (import)</span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>CNC manufacturability to scan geometry</span>
+                    <span style="text-align:center;">10%</span>
+                    <span style="text-align:center;">N/A (foam)</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                    <span style="text-align:center;"><span class="score-fail">2</span> (tooling req.)</span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Cost per seat (materials + fabrication)</span>
+                    <span style="text-align:center;">10%</span>
+                    <span style="text-align:center;"><span class="score-pass">4</span> (~$80)</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span> (~$25)</span>
+                    <span style="text-align:center;"><span class="score-fail">1</span> (~$400+)</span>
+                </div>
+                <div class="scoring-row" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Moisture &amp; chemical resistance</span>
+                    <span style="text-align:center;">5%</span>
+                    <span style="text-align:center;"><span class="score-pass">4</span></span>
+                    <span style="text-align:center;"><span class="score-pass">4</span> (sealed)</span>
+                    <span style="text-align:center;"><span class="score-pass">5</span></span>
+                </div>
+                <div class="scoring-row winner" style="grid-template-columns:1.8fr 60px 110px 130px 120px;">
+                    <span>Weighted Total</span>
+                    <span style="text-align:center;">100%</span>
+                    <span style="text-align:center; color:oklch(0.82 0.14 145);">4.35 ✓</span>
+                    <span style="text-align:center; color:oklch(0.82 0.14 145);">4.40 ✓</span>
+                    <span style="text-align:center; color:oklch(0.75 0.14 30);">2.80 ✗</span>
+                </div>
+            </div>
+            <p class="project-text">GRP composites scored strongly on mechanical performance and fire resistance but failed on local availability, tooling cost, and fabrication complexity — making them commercially unviable for a fleet-scale refurbishment project. FR HR PU Foam and Structural Plywood were both recommended: complementary materials for their respective roles (cushion vs. backbone).</p>
+
+            <!-- CAD & 3D Scanning -->
+            <h3 class="project-section-title">CAD Modelling &amp; 3D Scanning</h3>
+            <p class="project-text">Accurate digital geometry was critical for enabling CNC manufacture of the new plywood backbone. The process ran in two stages: manual measurement to establish overall dimensions and mounting geometry, followed by structured-light 3D scanning to capture the seat's complex organic curvature with engineering-level precision.</p>
+            <p class="project-text">The initial SolidWorks model — built from calipers, steel rules, and hand-drawn engineering sketches — captured the seat's overall form and fastener geometry but lacked fidelity in the ergonomic surface transitions. A trained technician subsequently performed a structured-light scan, generating a high-resolution point cloud that was processed into a triangulated STL mesh, then converted to a STEP-format parametric CAD surface model. The final scan-derived model achieves a dimensional tolerance of ±0.5–1.0 mm and serves as the master reference for all downstream CNC toolpath generation.</p>
+
+            <!-- NDA design block -->
+            <div class="tram-nda-block fade-in">
+                <div class="tram-nda-block-icon">🔒</div>
+                <p class="tram-nda-block-title">Final Design Not Shown</p>
+                <p class="tram-nda-block-text">The 3D scan model, STEP geometry files, and production drawings are confidential deliverables owned by SisterWorks and Yarra Trams under the project's IP agreement. The images below show the preliminary manual CAD model developed prior to 3D scanning — an intermediate stage shared in the academic report.</p>
+            </div>
+
+            <div class="insole-calibration-grid fade-in">
+                <figure style="margin:0;">
+                    <img src="images/projects/tram-seat/cad-backrest.jpg" alt="SolidWorks CAD model of Yarra Trams seat backrest — preliminary manual model showing overall form, surface curvature, and mounting geometry in a warm off-white render">
+                    <figcaption class="ww-img-caption">Preliminary SolidWorks model — seat backrest (manual measurement stage, prior to 3D scan refinement)</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/tram-seat/cad-seat.jpg" alt="SolidWorks CAD model of Yarra Trams seat cushion base — scan-derived surface mesh showing organic ergonomic contours and handle cutout in blue-purple render">
+                    <figcaption class="ww-img-caption">Scan-derived CAD surface model — seat base (3D scan reconstruction, STEP format)</figcaption>
+                </figure>
+            </div>
+
+            <!-- Supplier Engagement -->
+            <h3 class="project-section-title">Supplier Engagement</h3>
+            <p class="project-text">Supplier engagement validated that the proposed material system was not just technically sound, but practically procurable from local supply chains within realistic timelines and cost constraints. RFQ documents specifying density range, fire-retardant requirements, and compliance standards were issued to multiple suppliers across foam, plywood, and resin categories.</p>
+            <ul class="project-list">
+                <li><strong>Foam:</strong> Urecel Australia responded with a comprehensive quotation confirming availability of HR45-FR and HR50-FR formulations, EN 45545-2 R22 compliance, and a 3-week lead time. Joyce Foam Products and ACMA Industries were also contacted.</li>
+                <li><strong>Structural plywood:</strong> Plyco, Carter Holt Harvey, and Bunnings Trade Commercial Division were engaged for AS/NZS 2269-certified sheet stock and CNC profiling capability.</li>
+                <li><strong>Resin coatings:</strong> Epoxy and phenolic systems sourced from multiple manufacturers for edge sealing and moisture/fire performance enhancement.</li>
+            </ul>
+
+            <!-- Pivot: From Observations to Vendor Brief -->
+            <h3 class="project-section-title">From Failure Observations to Vendor-Ready Brief</h3>
+            <p class="project-text">The value of this project was not in finding that the seats were failing — anyone could see that. The value was in building a chain of evidence tight enough that a procurement decision could be made without further engineering interpretation. That required three explicit translation steps:</p>
+
+            <div class="peek-method-steps fade-in">
+                <div class="peek-method-step">
+                    <div class="peek-method-num">01</div>
+                    <h5>Failure Mode → Root Cause</h5>
+                    <p>Each physical observation (delamination, compression-set, surface wear) was traced to a specific root mechanism: insufficient edge sealing, incorrect density specification for the load profile, and inadequate abrasion specification respectively. Without this link, a replacement material selection risks repeating the same failure.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">02</div>
+                    <h5>Root Cause → Specification</h5>
+                    <p>Root causes were converted to material performance requirements: minimum foam ILD (140–170 N), rebound recovery (>50%), plywood bonding class (AS/NZS 2269 Type A), edge sealing requirement (epoxy/phenolic), and fire classification (EN 45545-2 R22 Hazard Level 2/3). These are the numbers a supplier can quote against.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">03</div>
+                    <h5>Specification → RFQ</h5>
+                    <p>Specifications were packaged into structured RFQ documents that named the compliance standard, specified the dimensional range, stated the required test evidence, and asked for lead time and per-unit cost. Suppliers could respond directly — no further engineering interpretation needed on their side.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">04</div>
+                    <h5>RFQ → Procurement Decision</h5>
+                    <p>Responses from Urecel Australia (foam), Plyco and Carter Holt Harvey (plywood), and resin suppliers confirmed local availability, compliance, and realistic lead times — closing the loop from a seat failure observed in service to a vendor-validated material system ready for prototype fabrication.</p>
+                </div>
+            </div>
+
+            <!-- Outcomes -->
+            <h3 class="project-section-title">Outcomes</h3>
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <h5>Root Causes Identified</h5>
+                    <p>Plywood delamination traced to insufficient original edge sealing. Foam compression-set attributed to incorrect density specification for the load cycling profile of public transport seating.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Compliant Material System Specified</h5>
+                    <p>FR HR PU foam (Urecel, EN 45545-2 R22) + resin-sealed structural plywood (AS/NZS 2269). Quotation received, compliance confirmed, manufacturing pathway established.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Digital Master Geometry Captured</h5>
+                    <p>3D structured-light scan produced a STEP-format CAD model at ±0.5–1.0 mm tolerance — the definitive reference for CNC toolpath generation and future prototype fabrication.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Standards Compliance Roadmap</h5>
+                    <p>Delivered a full standards matrix and testing plan covering EN 45545-2, AS 1530.2/.3, AS/NZS 2269, and DSAPT, providing the compliance dossier framework for Yarra Trams approval.</p>
+                </div>
+            </div>
+
+            <!-- Tools & Methods -->
+            <h3 class="project-section-title" style="margin-top:48px;">Tools &amp; Methods</h3>
+            <div class="skill-tags" style="margin-bottom:48px;">
+                <span>Failure Analysis</span>
+                <span>Reverse Engineering</span>
+                <span>SolidWorks CAD</span>
+                <span>Structured-Light 3D Scanning</span>
+                <span>Materials Selection</span>
+                <span>EN 45545-2 Fire Standards</span>
+                <span>AS 1530.2/.3</span>
+                <span>AS/NZS 2269</span>
+                <span>HR Polyurethane Foam</span>
+                <span>CNC Drawing Preparation</span>
+                <span>RFQ &amp; Supplier Engagement</span>
+                <span>STEP / STL Geometry Processing</span>
+            </div>
+
+            <a href="index.html#projects" class="btn btn-primary">← Back to All Projects</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Jayaraghul Thangaraj Kannan &nbsp;·&nbsp; Materials &amp; Process Engineer &nbsp;·&nbsp; Melbourne, Australia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

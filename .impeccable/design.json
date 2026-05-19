@@ -1,0 +1,333 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-16T00:00:00.000Z",
+  "title": "Design System: JTK Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "midnight-ore": {
+        "role": "primary",
+        "displayName": "Midnight Ore",
+        "canonical": "oklch(17% 0.07 250)",
+        "tonalRamp": [
+          "oklch(12% 0.05 250)",
+          "oklch(20% 0.07 250)",
+          "oklch(30% 0.09 250)",
+          "oklch(40% 0.10 250)",
+          "oklch(50% 0.10 250)",
+          "oklch(63% 0.08 250)",
+          "oklch(78% 0.05 250)",
+          "oklch(93% 0.01 250)"
+        ]
+      },
+      "ore-mid": {
+        "role": "primary",
+        "displayName": "Ore Mid",
+        "canonical": "oklch(26% 0.08 250)",
+        "tonalRamp": [
+          "oklch(15% 0.06 250)",
+          "oklch(22% 0.08 250)",
+          "oklch(32% 0.09 250)",
+          "oklch(42% 0.10 250)",
+          "oklch(54% 0.09 250)",
+          "oklch(66% 0.07 250)",
+          "oklch(80% 0.04 250)",
+          "oklch(94% 0.01 250)"
+        ]
+      },
+      "ore-light": {
+        "role": "primary",
+        "displayName": "Ore Light",
+        "canonical": "oklch(37% 0.10 250)",
+        "tonalRamp": [
+          "oklch(18% 0.07 250)",
+          "oklch(27% 0.09 250)",
+          "oklch(37% 0.11 250)",
+          "oklch(47% 0.11 250)",
+          "oklch(57% 0.10 250)",
+          "oklch(68% 0.07 250)",
+          "oklch(81% 0.04 250)",
+          "oklch(94% 0.01 250)"
+        ]
+      },
+      "process-signal": {
+        "role": "secondary",
+        "displayName": "Process Signal Blue",
+        "canonical": "oklch(60% 0.22 264)",
+        "tonalRamp": [
+          "oklch(20% 0.10 264)",
+          "oklch(30% 0.14 264)",
+          "oklch(40% 0.18 264)",
+          "oklch(50% 0.21 264)",
+          "oklch(60% 0.22 264)",
+          "oklch(70% 0.18 264)",
+          "oklch(82% 0.12 264)",
+          "oklch(93% 0.04 264)"
+        ]
+      },
+      "signal-wash": {
+        "role": "secondary",
+        "displayName": "Signal Wash",
+        "canonical": "oklch(95% 0.03 264)",
+        "tonalRamp": [
+          "oklch(60% 0.22 264)",
+          "oklch(70% 0.18 264)",
+          "oklch(78% 0.14 264)",
+          "oklch(84% 0.10 264)",
+          "oklch(89% 0.07 264)",
+          "oklch(93% 0.04 264)",
+          "oklch(96% 0.02 264)",
+          "oklch(99% 0.005 264)"
+        ]
+      },
+      "commendation-gold": {
+        "role": "tertiary",
+        "displayName": "Commendation Gold",
+        "canonical": "oklch(68% 0.14 85)",
+        "tonalRamp": [
+          "oklch(25% 0.07 85)",
+          "oklch(35% 0.09 85)",
+          "oklch(45% 0.12 85)",
+          "oklch(55% 0.14 85)",
+          "oklch(65% 0.14 85)",
+          "oklch(74% 0.12 85)",
+          "oklch(84% 0.07 85)",
+          "oklch(94% 0.02 85)"
+        ]
+      },
+      "page-ground": {
+        "role": "neutral",
+        "displayName": "Page Ground",
+        "canonical": "oklch(97% 0.008 250)",
+        "tonalRamp": [
+          "oklch(60% 0.02 250)",
+          "oklch(70% 0.015 250)",
+          "oklch(78% 0.012 250)",
+          "oklch(84% 0.01 250)",
+          "oklch(89% 0.009 250)",
+          "oklch(93% 0.008 250)",
+          "oklch(96% 0.007 250)",
+          "oklch(99% 0.004 250)"
+        ]
+      },
+      "border-grey": {
+        "role": "neutral",
+        "displayName": "Border Grey",
+        "canonical": "oklch(93% 0.008 250)",
+        "tonalRamp": [
+          "oklch(55% 0.02 250)",
+          "oklch(65% 0.015 250)",
+          "oklch(74% 0.012 250)",
+          "oklch(82% 0.010 250)",
+          "oklch(88% 0.009 250)",
+          "oklch(92% 0.008 250)",
+          "oklch(96% 0.005 250)",
+          "oklch(99% 0.003 250)"
+        ]
+      },
+      "text-primary": {
+        "role": "neutral",
+        "displayName": "Text Primary",
+        "canonical": "oklch(20% 0.01 250)",
+        "tonalRamp": [
+          "oklch(10% 0.01 250)",
+          "oklch(18% 0.01 250)",
+          "oklch(28% 0.01 250)",
+          "oklch(40% 0.01 250)",
+          "oklch(52% 0.01 250)",
+          "oklch(65% 0.01 250)",
+          "oklch(80% 0.008 250)",
+          "oklch(94% 0.004 250)"
+        ]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Text Secondary",
+        "canonical": "oklch(42% 0.012 250)",
+        "tonalRamp": [
+          "oklch(20% 0.01 250)",
+          "oklch(30% 0.012 250)",
+          "oklch(40% 0.013 250)",
+          "oklch(50% 0.013 250)",
+          "oklch(60% 0.012 250)",
+          "oklch(70% 0.010 250)",
+          "oklch(82% 0.007 250)",
+          "oklch(94% 0.003 250)"
+        ]
+      },
+      "text-tertiary": {
+        "role": "neutral",
+        "displayName": "Text Tertiary",
+        "canonical": "oklch(54% 0.012 250)",
+        "tonalRamp": [
+          "oklch(25% 0.01 250)",
+          "oklch(35% 0.012 250)",
+          "oklch(45% 0.013 250)",
+          "oklch(54% 0.012 250)",
+          "oklch(64% 0.010 250)",
+          "oklch(74% 0.008 250)",
+          "oklch(84% 0.005 250)",
+          "oklch(94% 0.003 250)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only. Stacked two-line nameplate. Never below the fold." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and project page hero titles. Authoritative level." },
+      "title": { "displayName": "Title", "purpose": "Card headings, timeline roles, award titles, hobby titles." },
+      "body": { "displayName": "Body", "purpose": "All prose: about text, timeline bullets, project descriptions. 70ch line length cap." },
+      "label": { "displayName": "Label", "purpose": "Section eyebrow text. Always precedes a headline. Never standalone." }
+    },
+    "shadows": [
+      {
+        "name": "ambient-rest",
+        "value": "0 4px 20px rgba(15,39,68,0.10)",
+        "purpose": "Cards in their default state. Soft containment without visual lift."
+      },
+      {
+        "name": "elevated-hover",
+        "value": "0 8px 40px rgba(15,39,68,0.18)",
+        "purpose": "Cards on hover. Always applied alongside transform: translateY(-4px to -8px). Never in isolation."
+      },
+      {
+        "name": "signal-glow",
+        "value": "0 8px 25px rgba(59,130,246,0.4)",
+        "purpose": "Primary button hover only. A blue-tinted glow that reads as energised without being decorative."
+      },
+      {
+        "name": "nav-scrolled",
+        "value": "0 2px 20px rgba(0,0,0,0.3)",
+        "purpose": "Navbar after scroll. Slightly heavier than card shadows to pin the nav above content."
+      }
+    ],
+    "motion": [
+      {
+        "name": "standard-transition",
+        "value": "all 0.3s ease",
+        "purpose": "Default for all interactive element state changes: color, background, border, transform, box-shadow."
+      },
+      {
+        "name": "fade-in-enter",
+        "value": "opacity 0.6s ease, transform 0.6s ease",
+        "purpose": "Section content fade-in on scroll. Elements begin at opacity 0 and translateY(24px)."
+      },
+      {
+        "name": "scroll-bounce",
+        "value": "bounce 2.5s infinite",
+        "purpose": "Hero scroll indicator only. A simple keyframe: translateY(0) to translateY(8px) at 50%, back to 0. Disable under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "lg", "value": "1024px", "note": "Projects grid drops from 3-col to 2-col. Skills grid collapses." },
+      { "name": "md", "value": "768px", "note": "Hero goes to single column. Most 2-col grids become 1-col. Navbar collapses to hamburger." },
+      { "name": "sm", "value": "480px", "note": "Awards and gallery grids go single column. Award cards stack vertically." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA. Used for 'See My Work' and 'View Project'. Process Signal Blue fill.",
+      "html": "<button class=\"ds-btn-primary\">See My Work</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; background: #3B82F6; color: #FFFFFF; border: 2px solid transparent; cursor: pointer; transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; } .ds-btn-primary:hover { background: #2563EB; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,130,246,0.4); } .ds-btn-primary:focus-visible { outline: 2px solid #3B82F6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary CTA on dark/navy backgrounds. 'Get In Touch' in hero.",
+      "html": "<button class=\"ds-btn-outline\">Get In Touch</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 8px; font-family: 'Raleway', sans-serif; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; background: transparent; color: #FFFFFF; border: 2px solid rgba(255,255,255,0.4); cursor: pointer; transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease; } .ds-btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); transform: translateY(-2px); } .ds-btn-outline:focus-visible { outline: 2px solid rgba(255,255,255,0.6); outline-offset: 3px; }"
+    },
+    {
+      "name": "Nav CTA",
+      "kind": "nav",
+      "refersTo": "nav-cta",
+      "description": "Contact button in the navbar. Tighter padding, 6px radius.",
+      "html": "<a class=\"ds-nav-cta\" href=\"#contact\">Contact</a>",
+      "css": ".ds-nav-cta { display: inline-block; background: #3B82F6; color: #FFFFFF; padding: 8px 18px; border-radius: 6px; font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 0.86rem; letter-spacing: 0.5px; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease; } .ds-nav-cta:hover { background: #2563EB; transform: translateY(-1px); } .ds-nav-cta:focus-visible { outline: 2px solid #3B82F6; outline-offset: 3px; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "button-primary",
+      "description": "Clickable project card with image area, tag, title, description, and arrow link. Entire card is an anchor.",
+      "html": "<a class=\"ds-project-card\" href=\"#\">\n  <div class=\"ds-project-img\">\n    <div class=\"ds-project-img-placeholder\">\n      <span style=\"font-size:3rem\">🖨️</span>\n    </div>\n  </div>\n  <div class=\"ds-project-body\">\n    <span class=\"ds-project-tag\">Additive Manufacturing · PEEK</span>\n    <h4 class=\"ds-project-title\">PEEK High-Temperature 3D Printer</h4>\n    <p class=\"ds-project-desc\">Engineered a cost-effective FDM printer capable of extruding PEEK at extreme temperatures.</p>\n    <span class=\"ds-project-link\">View Project →</span>\n  </div>\n</a>",
+      "css": ".ds-project-card { display: block; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(15,39,68,0.10); transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: inherit; cursor: pointer; } .ds-project-card:hover { transform: translateY(-8px); box-shadow: 0 8px 40px rgba(15,39,68,0.18); } .ds-project-img { height: 200px; overflow: hidden; } .ds-project-img-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #0F2744 0%, #1E3A5F 100%); display: flex; justify-content: center; align-items: center; } .ds-project-body { padding: 24px; } .ds-project-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #3B82F6; font-family: 'Raleway', sans-serif; } .ds-project-title { font-size: 1.02rem; font-weight: 700; color: #0F2744; margin: 10px 0; line-height: 1.3; font-family: 'Raleway', sans-serif; } .ds-project-desc { font-size: 0.84rem; color: #4A5568; line-height: 1.65; margin-bottom: 16px; } .ds-project-link { font-family: 'Raleway', sans-serif; font-size: 0.82rem; font-weight: 700; color: #3B82F6; display: inline-flex; align-items: center; gap: 4px; transition: gap 0.3s ease; } .ds-project-card:hover .ds-project-link { gap: 8px; } .ds-project-card:focus-visible { outline: 2px solid #3B82F6; outline-offset: 2px; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "chip",
+      "refersTo": "skill-tag",
+      "description": "Pill tag for skills. Off-white background by default, inverts to Midnight Ore on hover.",
+      "html": "<span class=\"ds-skill-tag\">Failure Analysis</span>",
+      "css": ".ds-skill-tag { display: inline-block; background: #F7F9FC; color: #4A5568; font-size: 0.78rem; font-weight: 600; padding: 6px 14px; border-radius: 50px; border: 1px solid #EDF2F7; transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; font-family: 'Raleway', sans-serif; cursor: default; } .ds-skill-tag:hover { background: #0F2744; color: #FFFFFF; border-color: #0F2744; }"
+    },
+    {
+      "name": "Award Badge",
+      "kind": "chip",
+      "refersTo": "award-badge",
+      "description": "Recognition chip used exclusively on award card entries. Gold for awards, Ore Mid for publications.",
+      "html": "<span class=\"ds-award-badge\">Award</span>",
+      "css": ".ds-award-badge { display: inline-block; font-family: 'Raleway', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 3px 12px; border-radius: 50px; background: #C5A028; color: #FFFFFF; } .ds-award-badge.pub { background: #1E3A5F; }"
+    },
+    {
+      "name": "Section Eyebrow",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Uppercase label that precedes every section headline. Process Signal Blue, no background.",
+      "html": "<p class=\"ds-section-label\">Materials &amp; Process Engineer</p>",
+      "css": ".ds-section-label { font-family: 'Raleway', sans-serif; font-size: 0.78rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #3B82F6; margin-bottom: 12px; }"
+    },
+    {
+      "name": "Stat Card",
+      "kind": "card",
+      "refersTo": "button-primary",
+      "description": "2x2 grid of achievement metrics in the About section. Top-accent stripe, centered metric + label.",
+      "html": "<div class=\"ds-stat-card\">\n  <span class=\"ds-stat-number\">5+</span>\n  <span class=\"ds-stat-label\">Years Engineering Experience</span>\n</div>",
+      "css": ".ds-stat-card { background: #FFFFFF; border-radius: 12px; padding: 28px 20px; text-align: center; box-shadow: 0 4px 20px rgba(15,39,68,0.10); border-top: 4px solid #3B82F6; transition: transform 0.3s ease, box-shadow 0.3s ease; } .ds-stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 40px rgba(15,39,68,0.18); } .ds-stat-number { display: block; font-family: 'Raleway', sans-serif; font-size: 2.4rem; font-weight: 800; color: #0F2744; margin-bottom: 8px; } .ds-stat-label { display: block; font-size: 0.78rem; color: #718096; font-weight: 600; line-height: 1.4; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Technical Memoir",
+    "overview": "This design system reads like a document written by the person who did the work — not by an agency hired to sell them. The aesthetic is built on a committed navy field that dominates the primary surfaces (hero, education, contact), offset by a tightly controlled signal accent and the specific warmth of a person who has actually shipped things. Every typographic choice, every spacing decision, and every color appears because it is earning something: credibility, hierarchy, or connection.\n\nThe palette is committed, not restrained. Midnight Ore covers more than half the site's total surface area across three full-bleed sections. This is intentional. The navy isn't a brand color applied tastefully; it is the environment the reader enters. Process Signal Blue appears only where it means something: active links, call-to-action buttons, company names in timeline entries, and section eyebrows. Its restraint is the point. Commendation Gold appears exactly twice — on award badges — and should never be extended to other uses.\n\nMotion is minimal and functional: fade-in on scroll for content sections, translate-up on card hover for tactile feedback, nothing choreographed, nothing ambient. The site should feel like it responds to you, not performs at you.",
+    "keyCharacteristics": [
+      "Committed navy palette; Midnight Ore is the dominant surface, not an accent",
+      "Single signal accent (Process Signal Blue) used to mean 'active' or 'interactive'",
+      "Commendation Gold is reserved exclusively for recognition and award elements",
+      "Raleway for all display and heading hierarchy; Open Sans for body prose",
+      "Cards lift on hover; sections fade in on scroll; no bounce, no elastic easing",
+      "Typography hierarchy built on weight contrast (400 body / 700 title / 800 display)",
+      "Prose line length capped at approximately 70ch in body sections"
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Process Signal Blue appears on fewer than 15% of any light-background screen. It is the indicator light on a control panel; if it's everywhere, it means nothing.", "section": "colors" },
+      { "name": "The Gold Lock Rule", "body": "Commendation Gold (#C5A028) is locked to award and recognition contexts. It does not appear on buttons, decorative elements, dividers, hover states, or section accents of any kind.", "section": "colors" },
+      { "name": "The Raleway Boundary Rule", "body": "Open Sans is prose only. Navigation, headings, labels, badges, captions, section eyebrows, and CTA buttons use Raleway. Never use Open Sans for UI text.", "section": "typography" },
+      { "name": "The Weight Contrast Rule", "body": "A minimum step of one full weight level (200 points) between hierarchy levels in close proximity. Body at 400, title at 700, headline at 800.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are flat at rest. No resting shadow on the hero image frame. Shadows are earned by interaction.", "section": "elevation" },
+      { "name": "The Navy Tint Rule", "body": "All shadows use rgba(15,39,68,...) as the shadow base, not rgba(0,0,0,...). A black shadow on a navy-heavy site looks like a different product.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use Midnight Ore for full-bleed hero, education, and contact sections.",
+      "Do keep Process Signal Blue to interactive and semantic roles only.",
+      "Do animate cards with transform: translateY and the matched shadow change together.",
+      "Do cap body text columns at approximately 70ch.",
+      "Do use Raleway at weight 800 for all display and section headline text.",
+      "Do match shadow tint to Midnight Ore (rgba(15,39,68,...)), not black.",
+      "Do reserve Commendation Gold exclusively for the awards section and recognition badges.",
+      "Do respect prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add a third accent color.",
+      "Don't use an identical card grid with same structure repeated endlessly.",
+      "Don't add decorative animations, entrance choreography, or ambient motion.",
+      "Don't use a dark hacker / terminal aesthetic.",
+      "Don't let the design drift into corporate grey sterility.",
+      "Don't use generic Bootstrap-style card grids or template navy-plus-card-grid layouts.",
+      "Don't use border-left greater than 1px as a standalone colored accent on new components.",
+      "Don't animate height, width, padding, margin, or layout properties.",
+      "Don't use gradient text (background-clip: text with a gradient)."
+    ]
+  }
+}

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEEK FDM 3D Printer — Fabrication & Nozzle Flow Analysis | Jayaraghul Thangaraj Kannan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JTK</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#education">Education &amp; Awards</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="project-hero-content">
+            <a href="index.html#projects" class="project-hero-back">← Back to Projects</a>
+            <p class="project-hero-tag">📄 Published Research · FDM · High-Temperature Polymers · COMSOL · Falcon 3D</p>
+            <h1 class="project-hero-title">Budget PEEK FDM 3D Printer —<br>Fabrication &amp; Nozzle Thermal Analysis</h1>
+            <p class="project-hero-sub">Equipment commissioning and risk mitigation project at <strong>Falcon 3D</strong>, Chennai — documented as a final year project at SASTRA University. The core problem: commission a PEEK extrusion system from scratch with thermal degradation as the primary failure risk and no validated safe operating window. Phase I used COMSOL Multiphysics to establish the <strong>133–137 minute safe operating envelope</strong> before degradation onset at 663 K. Phase II applied those findings to commission the printer, develop process parameters through structured DOE, and extend the reliable operating range to <strong>450°C</strong> — delivering validated PEEK capability at Rs. 93,125 (<strong>81% below the Rs. 5,00,000 commercial benchmark</strong>). Peer-reviewed publication.</p>
+        </div>
+    </section>
+
+    <!-- PROJECT BODY -->
+    <section class="project-body-section">
+        <div class="project-body-container">
+
+            <div class="project-info-grid fade-in">
+                <div class="project-info-card">
+                    <p class="project-info-label">Institution</p>
+                    <p class="project-info-value">SASTRA Deemed to be University, Tamil Nadu</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Programme</p>
+                    <p class="project-info-value">M.Tech (Integrated) — Advanced Manufacturing</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Phase I / Phase II</p>
+                    <p class="project-info-value">Sem 9 (2020) · Nozzle Flow Analysis &nbsp;|&nbsp; Sem 10 (2021) · Printer Fabrication</p>
+                </div>
+                <div class="project-info-card">
+                    <p class="project-info-label">Industry Partner</p>
+                    <p class="project-info-value">Falcon 3D, Chennai — printer developed for company deployment</p>
+                </div>
+            </div>
+
+            <!-- Falcon 3D callout -->
+            <div class="tram-nda-notice fade-in" style="background:oklch(0.965 0.01 30); border-color:oklch(0.82 0.05 30);">
+                <span class="tram-nda-icon" style="font-size:1.8rem;">🏭</span>
+                <div>
+                    <p class="tram-nda-title" style="color:var(--navy); font-size:1.05rem;">Industrial Context — Falcon 3D, Chennai</p>
+                    <p class="tram-nda-text" style="color:var(--text-mid);">This project ran concurrently with work at Falcon 3D, a Chennai-based additive manufacturing company. The printer was developed to give the company an in-house PEEK printing capability without the cost barrier of commercial machines.</p>
+                </div>
+            </div>
+
+            <!-- The Problem -->
+            <h3 class="project-section-title">The Engineering Problem</h3>
+            <p class="project-text">PEEK (Polyether Ether Ketone) rivals metals in specific strength, survives continuous service at 250°C, and is biocompatible enough for surgical implants and dental prosthetics. But printing it via FDM is technically demanding: the nozzle must reach at least 390°C, the bed must hold 150°C, and the chamber must maintain 90°C to prevent warping and delamination. Commercial PEEK printers start at Rs. 5,00,000 — making them inaccessible for small and medium manufacturers.</p>
+            <p class="project-text">The project had two interlocking goals: first, build the simulation knowledge of how PEEK behaves thermally inside a nozzle; then use that understanding to build a printer that actually achieves those conditions — at a fraction of the market cost.</p>
+
+            <!-- Material properties table -->
+            <h3 class="project-section-title">Why PEEK — Material Properties</h3>
+
+            <div class="h2f-capex-table fade-in">
+                <div class="h2f-capex-row header" style="grid-template-columns: 1fr 130px 140px 145px;">
+                    <span>Filament</span>
+                    <span style="text-align:right;">Density (g/cm³)</span>
+                    <span style="text-align:right;">Tensile Str. (MPa)</span>
+                    <span style="text-align:right;">Flexural Str. (MPa)</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr 130px 140px 145px;">
+                    <span>ABS</span>
+                    <span style="text-align:right;">1.04</span><span style="text-align:right;">43</span><span style="text-align:right;">66</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr 130px 140px 145px;">
+                    <span>PLA</span>
+                    <span style="text-align:right;">1.25</span><span style="text-align:right;">65</span><span style="text-align:right;">97</span>
+                </div>
+                <div class="h2f-capex-row total" style="grid-template-columns: 1fr 130px 140px 145px;">
+                    <span>PEEK (pure)</span>
+                    <span style="text-align:right;">1.30</span><span style="text-align:right;">100</span><span style="text-align:right;">170</span>
+                </div>
+            </div>
+
+            <p class="project-text" style="margin-top:16px;">Pure PEEK was selected over fibre-reinforced composites — literature confirmed that pure PEEK delivers superior impact strength, while composites trade that for flexural modulus. A wider application range and no composite-specific processing constraints made it the right choice for a general-purpose platform.</p>
+
+            <!-- ===================== PHASE I ===================== -->
+            <h3 class="project-section-title" style="margin-top:56px;">Phase I — Nozzle Thermal Analysis (2020)</h3>
+            <p class="project-text">Before building the printer, the critical question was: how long can a standard heater block operate at PEEK printing temperature before the material inside reaches its degradation limit of 663 K? That answer defines what any cooling system needs to achieve. COMSOL Multiphysics 5.3a was used to build and validate a thermal-fluid model — progressing from 2D to full 3D geometry.</p>
+
+            <div class="peek-method-steps fade-in">
+                <div class="peek-method-step">
+                    <div class="peek-method-num">01</div>
+                    <h5>2D Cold Flow Baseline</h5>
+                    <p>Pipe model (2 mm × 11 mm) with water at 0.30 m/s, 293 K. Validated against Darcy-Weisbach analytical solution — pressure drop deviation under 10 Pa. Confirmed numerical solver accuracy.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">02</div>
+                    <h5>2D Hot PEEK Flow</h5>
+                    <p>PEEK in liquid state at 650 K introduced into the heater block. 50 W/m² constant heat flux. Time-dependent study run to find when the material reaches 663 K — onset of thermal degradation.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">03</div>
+                    <h5>3D Annular Model</h5>
+                    <p>Full 3D annular nozzle geometry matching commercial 0.4 mm RepRap dimensions, built in COMSOL. Captures axisymmetric heat transfer from cartridge through the polymer melt to the nozzle tip.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">04</div>
+                    <h5>3D PEEK Thermal Prediction</h5>
+                    <p>PEEK properties substituted into the validated 3D geometry. Full transient simulation run to determine exact time to degradation under continuous operation without active cooling.</p>
+                </div>
+            </div>
+
+            <!-- 2D results -->
+            <h3 class="project-section-title">2D Simulation — Degradation Timeline</h3>
+            <p class="project-text">The 2D model shows the temperature field accumulating inside the heater block over time. Starting at 650 K inlet, the cartridge heater continuously adds energy to the nozzle region. The critical 663 K degradation threshold is reached after <strong>133 minutes</strong> of uninterrupted operation without any active cooling.</p>
+
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fig_p16_0.png" alt="COMSOL 2D temperature distribution at t=0 minutes — PEEK entering heater block at 650K, red-orange gradient">
+                    <figcaption class="ww-img-caption">t = 0 min — PEEK enters at 650 K. Temperature distribution across the heater block at start of operation.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fig_p16_1.png" alt="COMSOL 2D temperature distribution at t=133 minutes — PEEK reaching 663.93K degradation temperature, yellow-orange gradient">
+                    <figcaption class="ww-img-caption">t = 133 min — PEEK reaches 663.93 K. Thermal degradation onset without active cooling intervention.</figcaption>
+                </figure>
+            </div>
+
+            <!-- 3D nozzle -->
+            <h3 class="project-section-title">3D Nozzle Model &amp; Final Result</h3>
+            <p class="project-text">The full 3D annular nozzle geometry extended the 2D prediction — capturing radial heat dissipation across the nozzle volume. PEEK properties substituted into the validated model give a degradation threshold at <strong>137 minutes</strong>, refining the 2D estimate by 4 minutes.</p>
+
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fig_p15_0.jpeg" alt="COMSOL CAD model of the FDM heater block — cartridge heater cavity and nozzle thread, isometric view with mm dimensions">
+                    <figcaption class="ww-img-caption">3D heater block model — dimensions from commercial RepRap hardware. 50 W cartridge cavity visible right.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fig_p16_2.jpeg" alt="Annular 3D COMSOL nozzle model — cylindrical flow path with converging 0.4mm nozzle tip">
+                    <figcaption class="ww-img-caption">Annular 3D nozzle model — 0.4 mm outlet. Full 3D mesh captures both radial and axial thermal gradients.</figcaption>
+                </figure>
+            </div>
+
+            <figure class="fade-in" style="margin: 32px 0;">
+                <img src="images/projects/peek-3dprinter/fig_p18_0.png" alt="Side-by-side COMSOL 3D PEEK simulation: t=0 uniform 650K vs t=137 min showing 663K degradation at nozzle core" class="ww-wide-img">
+                <figcaption class="ww-img-caption">3D PEEK flow — initial state (t = 0 s) vs. t = 137 min. Nozzle core reaches 663 K without active cooling.</figcaption>
+            </figure>
+
+            <div class="tram-nda-notice fade-in" style="background:oklch(0.965 0.012 145); border-color:oklch(0.82 0.06 145);">
+                <span class="tram-nda-icon" style="font-size:1.8rem;">🔬</span>
+                <div>
+                    <p class="tram-nda-title" style="color:var(--navy); font-size:1.05rem;">Phase I Finding: 133–137 Minute Safe Operating Window</p>
+                    <p class="tram-nda-text" style="color:var(--text-mid);">A standard RepRap heater block at PEEK printing conditions reaches thermal degradation temperature after 133–137 minutes of continuous operation. This quantified the cooling requirement for Phase II: any active cooling system must extend this window to support uninterrupted production printing.</p>
+                </div>
+            </div>
+
+            <!-- ===================== PHASE II ===================== -->
+            <h3 class="project-section-title" style="margin-top:56px;">Phase II — Printer Fabrication (2021)</h3>
+            <p class="project-text">With the thermal boundary conditions established, Phase II focused on building the printer. The <strong>HyperCube Evolution</strong> open-source design from Thingiverse was chosen as the base — a rigid 30×30 mm aluminium extrusion frame well-suited for enclosure. The build followed five sequential stages, starting with a working PLA/ABS printer and progressively modifying it to handle PEEK's extreme requirements.</p>
+
+            <!-- Framework -->
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p20_0.jpeg" alt="HyperCube Evolution aluminium extrusion framework assembled in workshop — 30x30mm aluminium slots with L-bracket and T-bolt joinery">
+                    <figcaption class="ww-img-caption">Completed framework — 12 m of 30×30 mm aluminium extrusion cut to spec and assembled with L-bracket and T-bolt joinery. Designed for easy enclosure.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p24_2.jpeg" alt="Disassembled FDM hot-end components laid out — heat sink, bimetallic heat break, hot block, brass nozzle, heater cartridge and thermistor">
+                    <figcaption class="ww-img-caption">Hot-end components — heat sink, heat break, hot block, nozzle, heater cartridge, and thermistor. All high-temperature parts imported from London for maximum quality.</figcaption>
+                </figure>
+            </div>
+
+            <!-- PEEK Modifications -->
+            <h3 class="project-section-title">PEEK-Specific Hot-End Modifications</h3>
+            <p class="project-text">Once the printer was printing PLA and ABS reliably, five targeted modifications were made to the hot-end to enable PEEK printing. Each component was chosen to solve a specific failure mode at 390°C+.</p>
+
+            <div class="peek-method-steps fade-in">
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Nickel-Plated Copper Hot Block</h5>
+                    <p>Smaller block volume reduces the energy needed to hold 450°C. Nickel coating resists fatigue from repeated high-temperature heating and cooling cycles — a critical durability requirement for continuous production use at Falcon 3D.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Pt100 Thermistor + Amplifier</h5>
+                    <p>Standard thermistors top out below PEEK printing temperature. A Pt100 with signal amplifier extends measurement range to 450°C while detecting small temperature deviations — essential for tight thermal control near the degradation limit.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Bimetallic Heat Break</h5>
+                    <p>Stainless steel core (thin walls, low conductivity) with copper ends — copper at both ends conducts heat away from the melt zone quickly, preventing thermal creep and filament jamming inside the cold zone. Extends the effective melting zone precisely.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Vanadium 0.4 mm Nozzle</h5>
+                    <p>Vanadium has low thermal conductivity compared to brass — reducing heat loss from the nozzle tip to surroundings. Plastic-repellent, wear-resistant surface coating keeps the nozzle clear of oozing material, preventing blockages during long prints.</p>
+                </div>
+            </div>
+
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p27_1.jpeg" alt="Bimetallic heat break component on cutting mat — stainless steel core with copper threaded ends for high-temperature FDM">
+                    <figcaption class="ww-img-caption">Bimetallic heat break — stainless steel core with copper threaded ends. Prevents thermal creep and maintains sharp melt-zone boundary at 390°C.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p28_2.jpeg" alt="BondTech direct drive extruder with assembled high-temperature hot end mounted — brass heat break visible, green and red wiring">
+                    <figcaption class="ww-img-caption">BondTech direct drive extruder with PEEK hot-end assembled — direct drive minimises filament path, giving precise push-pull control critical for viscous high-temperature PEEK.</figcaption>
+                </figure>
+            </div>
+
+            <!-- Chamber + enclosure -->
+            <h3 class="project-section-title">Chamber Heating &amp; Enclosure</h3>
+            <p class="project-text">PEEK requires a 90°C chamber temperature to prevent the large thermal gradient between extruded part and surroundings from causing warping and delamination. An internal chamber heater — coil on a heat sink with a circulation fan — was installed inside the fully enclosed frame. All four sides were sealed with aluminium foil; the top panel is opened only for part removal, then closed during printing.</p>
+            <p class="project-text">Marlin firmware was upgraded from v1.X to <strong>Marlin 2.32x</strong>, adding high-temperature safety protocols that trigger shutdown if the nozzle temperature approaches 450°C — the absolute upper safety limit.</p>
+
+            <!-- Test prints + final printer -->
+            <h3 class="project-section-title">Calibration, Test Prints &amp; Final Build</h3>
+            <p class="project-text">Before switching to PEEK, calibration runs with ABS validated the motion system accuracy. Extruder step count was fine-tuned in firmware after the first prints showed slight over-extrusion. Fevistick adhesive was applied to the glass bed to improve first-layer adhesion. Once the printer was producing clean ABS geometry, the PEEK hot-end modifications were installed and the system was brought to temperature.</p>
+
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p26_0.jpeg" alt="ABS airfoil test print held in hand — triangular white ABS part printed on the custom-built printer to verify geometry accuracy">
+                    <figcaption class="ww-img-caption">ABS airfoil calibration print — geometry used to verify dimensional accuracy and layer adhesion before PEEK hot-end installation.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p26_1.jpeg" alt="ABS calibration cube printed on custom printer — white small cube held in hand showing clean layer lines">
+                    <figcaption class="ww-img-caption">ABS calibration cube — step count and extrusion multiplier tuned in Marlin firmware based on measured cube dimensions.</figcaption>
+                </figure>
+            </div>
+
+            <div class="insole-calibration-grid fade-in" style="margin: 32px 0;">
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p29_0.jpeg" alt="LCD screen on 3D printer showing Falcon 3D Ready with nozzle temperature at 390 degrees Celsius and max temperature set to 450">
+                    <figcaption class="ww-img-caption">LCD reads <em>Falcon 3D Ready.</em> — nozzle at 390°C, max limit set to 450°C. Custom firmware configuration built for Falcon 3D deployment.</figcaption>
+                </figure>
+                <figure style="margin:0;">
+                    <img src="images/projects/peek-3dprinter/fab_p29_1.jpeg" alt="Completed 3D printer fully enclosed in aluminium foil on all four sides — LCD controller visible at base, chamber sealed for 90 degree PEEK printing">
+                    <figcaption class="ww-img-caption">Completed printer — all four sides sealed with aluminium foil for 90°C chamber temperature. Fully capable of printing PEEK at Rs. 93,125 vs Rs. 5,00,000 commercial equivalent.</figcaption>
+                </figure>
+            </div>
+
+            <!-- Process Development -->
+            <h3 class="project-section-title">Process Parameter Development &amp; Optimisation</h3>
+            <p class="project-text">Commissioning the hardware was only half the work. Achieving stable, repeatable PEEK output required a systematic approach to process parameter development — one that mirrors what is done on industrial extrusion lines. With the printer operational, nozzle geometry, thermal profiles, feed rates, and cooling parameters were methodically adjusted and trialled. Each variable was isolated, tested across a range, and the output assessed for dimensional accuracy, layer adhesion, and surface integrity before moving to the next.</p>
+
+            <div class="peek-method-steps fade-in">
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Thermal Profile Optimisation</h5>
+                    <p>Nozzle temperature, bed temperature, and chamber temperature were tuned independently. PEEK demands a narrow window — too cold causes under-extrusion and layer delamination; too hot risks thermal degradation (663 K threshold established in Phase I). Final stable print temperature: 380–390°C nozzle, 150°C bed, 90°C chamber.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Feed Rate &amp; Extrusion Multiplier</h5>
+                    <p>PEEK's high melt viscosity requires slower feed rates than standard polymers. Extruder step count and extrusion multiplier were calibrated against measured output using calibration cubes — correcting the initial over-extrusion identified in ABS trials before any PEEK material was used.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>DOE — Identifying Optimal Process Windows</h5>
+                    <p>A structured Design of Experiments approach was applied across the key variables to identify the process window that minimised print failures, material waste, and defect rates. Interactions between nozzle temperature, print speed, and cooling were mapped — enabling targeted modifications rather than one-variable-at-a-time guesswork.</p>
+                </div>
+                <div class="peek-method-step">
+                    <div class="peek-method-num">▲</div>
+                    <h5>Output: Reduced Failures &amp; Improved Consistency</h5>
+                    <p>Process modifications resulting from the DOE improved equipment availability, reduced scrap from failed prints, and achieved consistent output quality across successive builds. Energy efficiency improved as the optimal thermal profile reduced the time the chamber heater ran at full load.</p>
+                </div>
+            </div>
+
+            <!-- Firmware -->
+            <h3 class="project-section-title">Firmware Configuration — High-Temperature Safety Protocols</h3>
+            <p class="project-text">Before any PEEK filament was loaded, Marlin firmware (v2.32x) was configured with hard limits and thermal runaway protection to ensure the hardware could not exceed safe operating bounds. This is the commissioning step that turns a physical build into a validated, safe-to-operate system — without it, an undetected heater fault could trigger a fire or destroy the hot-end assembly.</p>
+
+            <div class="code-block fade-in">
+                <span class="code-block-label">Configuration.h — Marlin v2.32x · PEEK High-Temperature Safety Config</span>
+                <pre><span class="code-comment">// ── Thermistor type ────────────────────────────────────────────────────
+// Pt100 amplifier board (high-temp range: 0–500°C, ±0.5°C accuracy)
+// Required for PEEK nozzle temps above 300°C</span>
+<span class="code-key">#define</span> <span class="code-val">TEMP_SENSOR_0</span>        <span class="code-val">20</span>     <span class="code-comment">// PT100 via MAX31865 amplifier</span>
+<span class="code-key">#define</span> <span class="code-val">TEMP_SENSOR_BED</span>      <span class="code-val">1</span>      <span class="code-comment">// 100k NTC — bed to 150°C</span>
+
+<span class="code-comment">// ── Hard temperature limits ────────────────────────────────────────────
+// Upper bounds set with safety margin above PEEK print temp (390°C)
+// Degradation onset at 663 K (390°C) → max capped at 460°C</span>
+<span class="code-key">#define</span> <span class="code-val">HEATER_0_MAXTEMP</span>     <span class="code-val">460</span>    <span class="code-comment">// Nozzle hard cutoff (°C)</span>
+<span class="code-key">#define</span> <span class="code-val">BED_MAXTEMP</span>          <span class="code-val">160</span>    <span class="code-comment">// Bed hard cutoff (°C)</span>
+<span class="code-key">#define</span> <span class="code-val">CHAMBER_MAXTEMP</span>      <span class="code-val">100</span>    <span class="code-comment">// Enclosure hard cutoff (°C)</span>
+
+<span class="code-comment">// ── Thermal runaway protection ─────────────────────────────────────────
+// Detects heater failure (open circuit, shorted thermistor, runaway)
+// Critical for high-temp operation where failure can cause fire</span>
+<span class="code-key">#define</span> <span class="code-val">THERMAL_PROTECTION_HOTENDS</span>
+<span class="code-key">#define</span> <span class="code-val">THERMAL_PROTECTION_PERIOD</span>     <span class="code-val">40</span>   <span class="code-comment">// Seconds to reach setpoint</span>
+<span class="code-key">#define</span> <span class="code-val">THERMAL_PROTECTION_HYSTERESIS</span>  <span class="code-val">4</span>   <span class="code-comment">// °C deviation before fault</span>
+<span class="code-key">#define</span> <span class="code-val">THERMAL_PROTECTION_BED</span>
+<span class="code-key">#define</span> <span class="code-val">THERMAL_PROTECTION_BED_PERIOD</span>  <span class="code-val">20</span>
+
+<span class="code-comment">// ── PID tuning — nozzle ────────────────────────────────────────────────
+// Auto-tuned at 390°C (PEEK print temp) using M303 E0 S390 C8
+// High Kp required — 50W heater cartridge into nickel copper hot block</span>
+<span class="code-key">#define</span> <span class="code-val">PIDTEMP</span>
+<span class="code-key">#define</span>   <span class="code-val">DEFAULT_Kp</span>   <span class="code-val">28.45</span>
+<span class="code-key">#define</span>   <span class="code-val">DEFAULT_Ki</span>    <span class="code-val">2.18</span>
+<span class="code-key">#define</span>   <span class="code-val">DEFAULT_Kd</span>   <span class="code-val">92.73</span>
+
+<span class="code-comment">// ── Minimum extrusion temperature ─────────────────────────────────────
+// Prevents cold extrusion — PEEK must be fully molten before feedrate load</span>
+<span class="code-key">#define</span> <span class="code-val">EXTRUDE_MINTEMP</span>      <span class="code-val">350</span>    <span class="code-comment">// °C minimum to enable extrusion</span></pre>
+            </div>
+
+            <p class="project-text">The thermal runaway detection configuration was the most critical safety step: if the Pt100 thermistor reads below setpoint for more than 40 seconds during heating, the firmware kills all heater outputs and halts the machine. This is the hardware equivalent of a fail-safe interlock — a concept directly applicable to any industrial process running near material degradation limits.</p>
+
+            <!-- Cost -->
+            <h3 class="project-section-title">Build Cost vs. Commercial Benchmark</h3>
+            <div class="h2f-capex-table fade-in">
+                <div class="h2f-capex-row header" style="grid-template-columns: 1fr auto;">
+                    <span>Component Group</span>
+                    <span style="text-align:right;">Cost (Rs.)</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Aluminium frame — slots, brackets, fasteners</span><span>14,600</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Motion system — rails, belts, pulleys, bearings</span><span>19,500</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Electronics — stepper motors, RAMPS 1.4, Arduino Mega 2560, wiring</span><span>14,550</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>PEEK hot-end — high-temp hot block, vanadium nozzle, E3D hot end, 50 W heater cartridge, Pt100 + amplifier, bimetallic heat break</span><span>15,650</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Heated bed — coil + aluminium plate + glass top</span><span>4,250</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Import &amp; logistics (London parts)</span><span>12,000</span>
+                </div>
+                <div class="h2f-capex-row" style="grid-template-columns: 1fr auto;">
+                    <span>Machining, 3D-printed structural parts, miscellaneous</span><span>6,650</span>
+                </div>
+                <div class="h2f-capex-row total" style="grid-template-columns: 1fr auto;">
+                    <span>Total Build Cost</span><span>Rs. 93,125</span>
+                </div>
+            </div>
+            <p class="project-text" style="margin-top:16px;">The cheapest commercial PEEK printer with equivalent capability (350×350×350 mm build volume) retails at Rs. 5,00,000 — the custom build delivers the same print parameters at <strong>81% lower cost</strong>.</p>
+
+            <!-- Outcomes -->
+            <h3 class="project-section-title">Outcomes</h3>
+            <div class="outcome-grid fade-in">
+                <div class="outcome-card">
+                    <h5>📄 Peer-Reviewed Publication</h5>
+                    <p>Research contributed to the published paper "Nozzle Flow Characteristics of PEEK Material in 3D Printing" — investigating thermal and melt-extrusion behaviour for high-temperature polymer FDM.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>81% Cost Reduction</h5>
+                    <p>Fully PEEK-capable FDM printer built at Rs. 93,125 — against a commercial benchmark of Rs. 5,00,000. Same print specs: 450°C nozzle, 150°C bed, 90°C chamber, 0.4 mm vanadium nozzle.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Degradation Window Quantified</h5>
+                    <p>COMSOL simulation determined the 133–137 minute safe operating window before thermal degradation — a validated design input that did not previously exist in open literature for this nozzle geometry.</p>
+                </div>
+                <div class="outcome-card">
+                    <h5>Industry Deployment — Falcon 3D</h5>
+                    <p>Printer built for deployment at Falcon 3D, Chennai. Firmware branded "Falcon 3D Ready." and configured for production use — taking the project from academic research to a working industrial asset.</p>
+                </div>
+            </div>
+
+            <!-- Tools & Methods -->
+            <h3 class="project-section-title" style="margin-top:48px;">Tools &amp; Methods</h3>
+            <div class="skill-tags" style="margin-bottom:48px;">
+                <span>COMSOL Multiphysics 5.3a</span>
+                <span>Thermal-Fluid CFD Simulation</span>
+                <span>FDM / Melt Extrusion</span>
+                <span>PEEK High-Temperature Processing</span>
+                <span>RepRap Open-Source Hardware</span>
+                <span>HyperCube Evolution Design</span>
+                <span>Arduino Mega 2560</span>
+                <span>RAMPS 1.4</span>
+                <span>Marlin Firmware (v1.X → v2.32x)</span>
+                <span>BondTech Direct Drive Extruder</span>
+                <span>Bimetallic Heat Break</span>
+                <span>Vanadium Nozzle</span>
+                <span>Aluminium Extrusion Framing</span>
+                <span>Polymer Material Science</span>
+                <span>Additive Manufacturing</span>
+                <span>Process Parameter Development</span>
+                <span>Design of Experiments (DOE)</span>
+                <span>Equipment Commissioning &amp; Validation</span>
+                <span>Scrap Reduction &amp; Process Optimisation</span>
+            </div>
+
+            <a href="index.html#projects" class="btn btn-primary">← Back to All Projects</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 Jayaraghul Thangaraj Kannan &nbsp;·&nbsp; Materials &amp; Process Engineer &nbsp;·&nbsp; Melbourne, Australia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
